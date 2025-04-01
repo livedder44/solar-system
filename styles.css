@@ -631,7 +631,7 @@ section {
 
 }
   .solar-system-container {
-    /* height: 200vh; */
+  transform: scale(0.65);
 
 }
 
