@@ -408,10 +408,10 @@ section {
 
 @keyframes rotate {
   0% {
-    transform: translate(-50%, -50%) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(var(--initial-angle, 0deg)); /* Використовуємо змінну CSS */
   }
   100% {
-    transform: translate(-50%, -50%) rotate(360deg);
+    transform: translate(-50%, -50%) rotate(calc(var(--initial-angle, 0deg) + 360deg)); /* Додаємо 360 градусів до початкового кута */
   }
 }
 @keyframes rotate-reverse {
