@@ -631,9 +631,11 @@ section {
 
 }
   .solar-system-container {
+    /* height: 200vh; */
     grid-row: 1;
     transform: scale(0.5);
     background-size: auto;
+
 }
 
   .info{
