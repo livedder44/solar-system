@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Solar System</title>
+</head>
+
+<body class="flex">
+    <div class="background-dots"></div>
+    <header>
+        <nav class="navigation flex">
+            <div class="logo">
+                <a href="./index.html"><img src="./assets/img/logo.svg" alt="logo"></a>
+            </div>
+            <label for="menu-toggle" class="burger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </label>
+            <ul class="nav-links desc-nav flex">
+            </ul>
+        </nav>
+    </header>
+    <input type="checkbox" id="menu-toggle" style="display: none;">
+    <nav class="mobile-nav">
+      <ul class="nav-links flex mobile-nav-list">
+        </ul>
+    </nav>
+    <main class="overview grid">
+        <section class="info grid">
+            <div class="planet-container flex">
+            </div>
+            <div class="descr flex">
+                <h1></h1>
+                <p></p>
+                <div class="source flex"><span>Source:</span><a href="" class="wiki-link flex" target="_blank"><span>Wikipedia</span><img src="./assets/img/wiki-link.svg" alt="link"></a>
+                </div>
+            </div>
+            <div class="list-info flex">
+            </div>
+        </section>
+        <section class="digital flex"></section>
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>

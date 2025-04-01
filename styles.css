@@ -1,0 +1,675 @@
+/* додавання шрифтів */
+@font-face {
+  font-family: "Spartan-Bold";
+  src: url("./assets/fonts/LeagueSpartan-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Spartan-Regular";
+  src: url("./assets/fonts/LeagueSpartan-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Antonio";
+  src: url("./assets/fonts/Antonio-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+/* створення змінних */
+:root {
+  --text-style-h1: bold 80px/103px "Antonio", sans-serif;
+  --text-style-h2: bold 40px/52px "Antonio", sans-serif;
+  --text-style-h3: bold 12px/25px "Spartan-Bold", sans-serif;
+  --text-style-h4: bold 11px/25px "Spartan-Bold", sans-serif;
+  --text-style-body: normal 14px/25px "Spartan-Regular", sans-serif;
+
+  --color-white: #ffffff;
+  --color-dark-navy: #070724;
+  --color-grey-1: #38384f;
+  --color-grey-2: #838391;
+  --color-grey-3: #979797;
+  --color-blue-1: #419ebb;
+  --color-orange-1: #eda249;
+  --color-purple-1: #6f2ed6;
+  --color-red-1: #d14c32;
+  --color-red-2: #d83a34;
+  --color-orange-2: #cd5120;
+  --color-teal-1: #1ec2a4;
+  --color-blue-2: #2d68f0;
+}
+/* присвоєння шрифту */
+h1 {
+  font: var(--text-style-h1);
+  color: var(--color-white);
+  text-transform: uppercase;
+  margin: 0;
+}
+
+h2 {
+  font: var(--text-style-h2);
+  letter-spacing: -1.5px;
+  color: var(--color-white);
+  margin: 0;
+  text-transform: uppercase;
+}
+
+h3,
+button {
+  font: var(--text-style-h3);
+  letter-spacing: 2.6px;
+  color: var(--color-white);
+  margin: 0;
+}
+h4 {
+  font: var(--text-style-h4);
+  letter-spacing: 1px;
+  color: var(--color-grey-2);
+  margin: 0;
+  text-transform: uppercase;
+}
+
+body {
+  /* min-height: 100vh; */
+  box-sizing: border-box;
+  padding: 0;
+  flex-direction: column;
+  background-color: #070724;
+  /* overflow: auto; */
+}
+
+body,
+p {
+  font: var(--text-style-body);
+  color: var(--color-white);
+  margin: 0;
+}
+
+a {
+  font: var(--text-style-h4);
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: var(--color-grey-2);
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  background: none;
+  border: none;
+  width: 350px;
+  height: 48px;
+}
+.mobile-nav {
+  display: none;
+}
+.flex {
+  display: flex;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+.grid {
+  display: grid;
+}
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  /* flex-direction: column; */
+  background-color: #070724;
+  overflow: auto;
+  /* align-items: center ;
+  justify-content: flex-end; */
+}
+
+.background-dots {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* header */
+header {
+  width: 100%;
+  border-bottom: 1px solid rgba(151, 151, 151, 0.2);
+  margin-bottom: 126px;
+  box-sizing: border-box;
+  padding: 0 40px 0 32px;
+}
+
+.navigation {
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 86px;
+}
+
+.nav-links {
+  width: 666px;
+  justify-content: end;
+  column-gap: 33px;
+  height: 100%;
+  align-items: flex-end;
+}
+
+.nav-links a {
+  text-transform: uppercase;
+}
+
+.nav-links > li {
+  height: 95%;
+  display: flex;
+  align-items: center;
+}
+
+/* section */
+section {
+  width: 100%;
+  max-width: 1110px;
+}
+
+.overview {
+  justify-content: center;
+  /* max-width: 1440px; */
+
+}
+
+.planet-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  grid-row: 1 / 3; /* Займає обидва рядки */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.descr {
+  flex-direction: column;
+  grid-column: 2; /* Займає другу колонку */
+  grid-row: 1; /* Займає перший рядок */
+  margin: 0 ;
+  row-gap: 24px;
+}
+
+/* .descr > h1 {
+  margin-bottom: 24px;
+}
+.descr >p {
+  margin-bottom: 24px;
+} */
+.planet-container > img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* .geology-svg-container {
+  transform: translateX(-50%);
+} */
+
+.geology-img {
+  position: absolute;
+  top: 56%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  object-fit: cover;
+  width: 129px;
+  height: 129px;
+}
+
+.solar-system-container {
+  position: relative;
+ 
+  justify-content: center;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 111, 0, 0.311) 20%,
+    rgba(255, 140, 0, 0) 55%,
+    rgba(40, 40, 40, 0) 80%
+  );
+  background-size: 700px;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+.sun {
+  height: 150px;
+  /* z-index: 100; */
+}
+
+/* .sun > img {
+  z-index: -10;
+} */
+
+.orbit {
+  position: absolute;
+  border-radius: 50%;
+  border: 1.5px solid #e2cab259;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.planet {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* animation: rotate-reverse 2s linear infinite; */
+}
+
+.planet > img {
+  height: 25px;
+}
+
+.source {
+  margin-bottom: 39px;
+  column-gap: 4px;
+}
+
+.source span {
+  font-family: var(--text-style-body);
+  color: var(--color-grey-2);
+}
+
+.source a {
+  text-decoration: underline;
+  letter-spacing: normal;
+}
+
+.wiki-link {
+  column-gap: 8px;
+  align-items: center;
+}
+.wiki-link > img {
+  max-width: 12px;
+    max-height: 11px
+
+}
+.info {
+  grid-template-columns: 59% 31%; 
+  grid-template-rows: auto auto; /* Автоматична висота для рядків */
+  width: 100%;
+  margin-bottom: 87px;
+  column-gap: 10%;
+}
+
+.info > p {
+  height: 150px;
+  margin: 24px 0;
+}
+
+.list-info {
+  flex-direction: column;
+  row-gap: 16px;
+}
+
+.info-button {
+  column-gap: 28px;
+  align-items: center;
+  color: var(--color-white);
+  padding: 12px 20px;
+  cursor: pointer;
+  width: 350px;
+  height: 48px;
+  border: 1px solid rgba(151, 151, 151, 0.2);
+}
+
+.button-number {
+  color: var(--color-white);
+  opacity: 50%;
+}
+
+.button-text {
+  text-transform: uppercase;
+  flex-grow: 1;
+  text-align: left;
+}
+
+.digital {
+  box-sizing: border-box;
+  column-gap: 30px;
+  justify-content: flex-end;
+  padding-bottom: 36px;
+
+}
+
+.digital-info {
+  box-sizing: border-box;
+  border: 1px solid rgba(151, 151, 151, 0.2);
+  width: 100%;
+  width: 255px;
+  height: 128px;
+  padding: 23px 20px;
+}
+
+.info-button:hover {
+  background-color: var(--color-grey-1);
+  transition: 0.3s ease;
+}
+
+.planet-name {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 14px;
+  font-family: var(--text-style-h4);
+  opacity: 0;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.planet:hover .planet-name,
+.sun:hover .planet-name {
+  opacity: 1;
+}
+
+
+
+ .burger-menu {
+     display: none;
+     cursor: pointer;
+     flex-direction: column;
+     justify-content: space-around;
+     width: 30px;
+     height: 25px;
+     z-index: 10;
+ }
+ 
+ .burger-menu .bar {
+     width: 100%;
+     height: 3px;
+     background-color: #fff;
+     transition: 0.4s;
+ }
+ 
+
+
+
+
+
+
+
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+@keyframes rotate-reverse {
+  0% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+
+
+
+@media (max-width: 1024px) {
+    :root {
+  --text-style-h1: normal 48px/62px "Antonio", sans-serif;
+  --text-style-h2: normal 24px/31px "Antonio", sans-serif;
+  --text-style-h3: bold 9px/25px "Spartan-Bold", sans-serif;
+  --text-style-h4: bold 8px/16px "Spartan-Bold", sans-serif;
+  --text-style-body: normal 11px/22px "Spartan-Regular", sans-serif;
+  }
+
+  header { 
+    margin: 0;
+  }
+
+
+  body {
+    max-width: 1024px;
+  }
+  .navigation {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 159px;
+  }
+
+  .logo {
+    margin-top: 32px;
+  }
+
+  .nav-links {
+    width: 666px;
+    justify-content: center;
+    column-gap: 33px;
+    height: 25px;
+    margin-bottom: 27px;
+  }
+
+
+  .info {
+    flex-wrap: wrap;
+    margin: 0;
+    grid-template-columns: 50% 50%; 
+    column-gap: 0;
+  }
+
+
+
+  .planet-container {
+    transform: scale(0.625);
+    grid-column: 1 /3; /* Займає першу колонку */
+    grid-row: 1; /* Займає обидва рядки */
+      /* width: 100vh;
+    height: 100vh; */
+  }
+
+  .solar-system-container {
+    height: 100vh;
+
+}
+
+  .descr {
+    max-width: 339px;
+    grid-column: 1; /* Займає другу колонку */
+    grid-row: 2; /* Займає перший рядок */
+    margin: 0;
+  }
+  .list-info {
+    justify-content: center;
+    align-items: flex-end;
+    grid-column: 2;
+    grid-row: 2;
+  }
+.digital {
+  column-gap: 11px;
+}
+.digital-info {
+ 
+  width: 164px;
+  height: 88px;
+  padding: 16px 0 19px 15px;
+
+  
+}
+
+.info-button {
+  column-gap: 16px;
+  padding: 12px 20px;
+  cursor: pointer;
+  width: 281px;
+  height: 40px;
+}
+
+.source {
+  margin-bottom: 27px;
+}
+
+}
+
+
+
+@media (max-width: 768px) {
+
+    :root {
+  --text-style-h1: normal 40px/52px "Antonio", sans-serif;
+  --text-style-h2: normal 20px/26px "Antonio", sans-serif;
+  --text-style-h3: bold 9px/25px "Spartan-Bold", sans-serif;
+  --text-style-h4: bold 8px/16px "Spartan-Bold", sans-serif;
+  --text-style-body: normal 11px/22px "Spartan-Regular", sans-serif;
+  }
+  
+
+  .navigation {
+     justify-content: space-between;
+     position: relative; /* Додано для позиціонування burger-menu */
+     flex-direction: row;
+     
+   }
+   .logo {
+      margin: 0;
+   }
+   .header {
+     /* padding: 0 24px; */
+     height: auto;
+   }
+   .header, .navigation {
+      height: 68px;
+   }
+   .burger-menu {
+     display: flex;
+   }
+   .desc-nav {
+       display: none;
+   }
+  .mobile-nav {
+    background-color: var(--color-dark-navy);
+    /* min-height: 100vh;
+    height: 100vh; */
+    padding-top: 20px;
+  }
+
+  .descr  {
+    width: 100%;
+    justify-content: center;
+    grid-column: 1/3;
+    grid-row: 3;
+    max-width: max-content;
+    align-items: center;
+    padding: 0 24px;
+    box-sizing: border-box;
+  }
+
+
+  .nav-links {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding:0  24px;
+    
+  }
+
+  
+  .nav-links > li {
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid rgba(151, 151, 151, 0.2);
+    padding: 20px 0;
+  }
+
+  .nav-links :last-child {
+    border-bottom: none;
+  }
+  .nav-links > li > a {
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    color: var(--color-white);
+    margin-right: 8px;
+    
+  }
+
+ 
+
+.mobile-nav-list li a::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--marker-color, #ccc);
+    margin-right: 25px; /* Відступ між маркером та текстом */
+}
+
+.mobile-nav-list.active {
+  display: flex;
+
+}
+
+.planet-container {
+    transform: scale(0.45);
+    grid-column: 1/3;
+    grid-row: 2;
+
+}
+  .solar-system-container {
+    /* height: 200vh; */
+
+}
+
+  .info{
+    grid-template-columns: 1fr; /* Одна колонка */
+    grid-template-rows: auto auto auto; /* Автоматична висота для рядків */
+    justify-content: center;
+  }
+
+.list-info {
+    grid-column: 1/3;
+    grid-row: 1;
+    flex-direction: row;
+    border-bottom: 1px solid rgba(151, 151, 151, 0.2);
+    
+}
+.info-button {
+  border: none;
+}
+
+.digital {
+  align-items: center;
+  flex-direction: column;
+  row-gap: 8px;
+  justify-content: center;
+  padding: 0 24px 36px 24px;
+}
+
+.digital-info {
+  width: 100%;
+  height: 48px;
+  padding: 0 24px 0 47px;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+.button-number {
+  display: none;
+}
+
+}

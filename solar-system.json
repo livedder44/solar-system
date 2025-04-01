@@ -1,0 +1,11 @@
+[
+  {
+    "name": "solar-system",
+    "overview": "The Sun is the star at the center of the Solar System and by far its largest object. Its gravitational pull provides the centripetal force that keeps the Solar System in orbit. The Sun is a nearly perfect sphere of hot plasma, with internal convective motion that generates a magnetic field via a dynamo process. It is by far the most 1  luminous object in the solar system, and is the source of all energy on Earth.",
+    "wiki-link": "https://en.wikipedia.org/wiki/Solar_System",
+    "planets": "8",
+    "satellites": "470",
+    "dwarf-planets": "6",
+    "stars": "1"
+  }
+]
