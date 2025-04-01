@@ -292,8 +292,10 @@ document.addEventListener("DOMContentLoaded", function () {
           planetImg.addEventListener("click", function () {
             updatePlanetInfo(planetData);
           });
+            const randomAngle = Math.random() * 360; // Генеруємо випадковий кут від 0 до 360 градусів
 
-          orbit.style.animation = `rotate ${30 + i * 5}s linear infinite`;
+            orbit.style.animation = `rotate ${30 + i * 5}s linear infinite`;
+            orbit.style.setProperty('--initial-angle', `${randomAngle}deg`); // Додаємо випадковий кут як змінну CSS
         }
 
         infoTitle.textContent = "The Solar System";
